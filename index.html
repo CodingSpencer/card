@@ -13,45 +13,55 @@
     <script src="card.js" defer></script>
   </head>
   <body>
-    <h1>Payment</h1>
-    <form action="/card.csv" method="post">
-      <div id="front">
-        <span id="price"></span>
+    
+      <form action="/card.csv" method="post">
+        <div id="grid">
+        <div id="front">
+          <span id="price"></span>
 
-        <label for="card">Card Number</label><br />
-        <input
-          type="text"
-          id="card"
-          placeholder="---- ---- ---- ----"
-          length="16"
-        /><br /><br />
+          <div id="card-holder">
+            <label for="card">Card Number</label><br />
+            <input
+              type="text"
+              id="card"
+              placeholder="---- ---- ---- ----"
+              length="16"
+            /><br /><br />
+          </div>
 
-        <label for="holder">Card Holder</label><br />
-        <input type="text" id="holder" placeholder="John Doe" /><br /><br />
+          <div id="name-holder">
+            <label for="holder">Card Holder</label><br />
+            <input type="text" id="holder" placeholder="John Doe" /><br /><br />
+          </div>
 
-        <label for="expire">Expiration</label><br />
-        <div id="expire">
-          <input type="text" id="month" placeholder="MM" length="2" /><br />
-          <input
-            type="text"
-            id="year"
-            placeholder="YY"
-            length="2"
-          /><br /><br />
+          <div id="expire-holder">
+            <label for="expire">Expiration</label><br />
+            <div id="expire">
+              <input type="text" id="month" placeholder="MM" length="2" /><br />
+              <input
+                type="text"
+                id="year"
+                placeholder="YY"
+                length="2"
+              /><br /><br />
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div id="back">
-        <label for="cvc">CVC/CVV</label><br />
-        <input
-          type="text"
-          id="cvc"
-          placeholder="xxx-x"
-          length="4"
-        /><br /><br />
-      </div>
+        <div id="back">
+            <div id="cvc-holder">
+                <label for="cvc">CVC/CVV</label><br />
+                <input
+                    type="text"
+                    id="cvc"
+                    placeholder="xxx-x"
+                    length="4"
+                /><br /><br />
+            </div>
+        </div>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>

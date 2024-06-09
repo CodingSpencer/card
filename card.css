@@ -1,3 +1,9 @@
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 300px);
+}
+
 #front,
 #back {
   position: absolute;
@@ -7,29 +13,69 @@
   box-sizing: border-box;
   padding: 20px 30px 0;
   color: white;
+  border-radius: 6px;
 }
 
 #back {
-  z-index: -2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  z-index: -1;
   top: 40px;
-  right: 0;
+  border: 1px solid black;
+}
+
+#front {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  margin: 100px;
+  border: 1px solid black;
+}
+
+#price {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#card-holder {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+#name-holder {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+#expire-holder {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  padding-left: 10px;
 }
 
 #expire {
-  width: 110px;
   display: grid;
-  grid-template-columns: 50px 50px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 #month,
 #year {
-  width: 100%;
+  width: 80%;
 }
 
 #month {
-  grid-column: 1;
+  grid-column: 1 / 2;
 }
 
 #year {
-  grid-column: 2;
+  grid-column: 2 / 3;
+}
+
+#submit {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
