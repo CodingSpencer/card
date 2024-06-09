@@ -13,9 +13,8 @@
     <script src="card.js" defer></script>
   </head>
   <body>
-    
+    <div id="grid">
       <form action="/card.csv" method="post">
-        <div id="grid">
         <div id="front">
           <span id="price"></span>
 
@@ -49,15 +48,15 @@
         </div>
 
         <div id="back">
-            <div id="cvc-holder">
-                <label for="cvc">CVC/CVV</label><br />
-                <input
-                    type="text"
-                    id="cvc"
-                    placeholder="xxx-x"
-                    length="4"
-                /><br /><br />
-            </div>
+          <div id="cvc-holder">
+            <label for="cvc">CVC/CVV</label><br />
+            <input
+              type="text"
+              id="cvc"
+              placeholder="xxx-x"
+              length="4"
+            /><br /><br />
+          </div>
         </div>
 
         <button id="submit" type="submit">Submit</button>
