@@ -16,7 +16,7 @@
     <h1>Payment</h1>
     <form action="/card.csv" method="post">
       <div id="front">
-        <section id="price"></section>
+        <span id="price"></span>
 
         <label for="card">Card Number</label><br />
         <input
@@ -30,8 +30,15 @@
         <input type="text" id="holder" placeholder="John Doe" /><br /><br />
 
         <label for="expire">Expiration</label><br />
-        <input type="text" id="expire" placeholder="MM" length="2" /><br />
-        <input type="text" placeholder="YY" length="2" /><br /><br />
+        <div id="expire">
+          <input type="text" id="month" placeholder="MM" length="2" /><br />
+          <input
+            type="text"
+            id="year"
+            placeholder="YY"
+            length="2"
+          /><br /><br />
+        </div>
       </div>
 
       <div id="back">
